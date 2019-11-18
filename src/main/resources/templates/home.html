@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/default}">
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <meta charset="UTF-8">
+    <title th:text="#{application.title}"></title>
+</head>
+<body>
+    <div layout:fragment="content" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 th:text="#{application.title}"></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color:azure">
+                <a th:href="@{'/months'}" th:text="#{application.analysis.monthly}"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

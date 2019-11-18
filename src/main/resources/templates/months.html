@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/default}">>
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{application.title}"></title>
+</head>
+<body>
+<div layout:fragment="content">
+    <table class="table-dark">
+        <thead>
+        <tr>
+            <th th:text="#{timeunit.month}">Month</th>
+            <th th:text="#{timeunit.year}">Year</th>
+            <th th:text="#{application.revenue}">Revenue</th>
+        </tr>
+        </thead>
+        <thbody>
+            <tr th:each="month: ${months}">
+                <td th:text="${month.month}"/>
+                <td th:text="${month.year}"/>
+                <td th:text="${month.revenue}"/>
+            </tr>
+        </thbody>
+    </table>
+</div>
+</body>
+</html>
